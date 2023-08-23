@@ -1,0 +1,28 @@
+{
+  "name": "gatsby-starter-minimal",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A Gatsby starter with no plugins and a single welcome page.",
+  "author": "Laurie Barth",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "pages:dev": "wrangler pages dev --compatibility-date=2023-08-23 --proxy 8000 -- pnpm run develop",
+    "pages:deploy": "pnpm run build && wrangler pages deploy ./public"
+  },
+  "license": "0BSD",
+  "dependencies": {
+    "gatsby": "^5.11.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "wrangler": "^3.5.1"
+  }
+}
