@@ -67,5 +67,11 @@ module.exports = {
       },
     },
     "gatsby-transformer-sharp",
+    {
+      resolve: `gatsby-plugin-cloudflare-web-analytics`,
+      options: {
+        token: "fa6adea96202483e94ab63d598660154",
+      },
+    },
   ],
 };
