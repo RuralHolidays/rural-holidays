@@ -2,7 +2,7 @@ import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
 
 const Close = () => {
-  const [state, handleSubmit] = useForm("xbjqdoje");
+  const [state, handleSubmit] = useForm(process.env.GATSBY_FORMSPREE_ID);
 
   return (
     <section className="ui-section-close" id="contact">

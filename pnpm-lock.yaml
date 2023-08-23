@@ -11,9 +11,6 @@ dependencies:
   gatsby:
     specifier: ^5.11.0
     version: 5.11.0(babel-eslint@10.1.0)(esbuild@0.16.3)(react-dom@18.2.0)(react@18.2.0)(typescript@5.1.6)
-  gatsby-plugin-cloudflare-web-analytics:
-    specifier: ^0.3.2
-    version: 0.3.2(gatsby@5.11.0)
   gatsby-plugin-image:
     specifier: ^3.11.0
     version: 3.11.0(@babel/core@7.22.10)(gatsby-plugin-sharp@5.11.0)(gatsby-source-filesystem@5.11.0)(gatsby@5.11.0)(graphql@16.8.0)(react-dom@18.2.0)(react@18.2.0)
@@ -5886,14 +5883,6 @@ packages:
       '@parcel/runtime-js': 2.8.3(@parcel/core@2.8.3)
       '@parcel/transformer-js': 2.8.3(@parcel/core@2.8.3)
       '@parcel/transformer-json': 2.8.3(@parcel/core@2.8.3)
-
-  /gatsby-plugin-cloudflare-web-analytics@0.3.2(gatsby@5.11.0):
-    resolution: {integrity: sha512-maZ85olTLdNJ21a5k5ZbJSZWi44sw0G0WeRhYgfClr7myO/F3vaukXD2bk6QSLoRU1Jq6ng/hRHN7tM2mbzyQw==}
-    peerDependencies:
-      gatsby: '>3.0.0'
-    dependencies:
-      gatsby: 5.11.0(babel-eslint@10.1.0)(esbuild@0.16.3)(react-dom@18.2.0)(react@18.2.0)(typescript@5.1.6)
-    dev: false
 
   /gatsby-plugin-image@3.11.0(@babel/core@7.22.10)(gatsby-plugin-sharp@5.11.0)(gatsby-source-filesystem@5.11.0)(gatsby@5.11.0)(graphql@16.8.0)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-hQ3MjE9v5Y84f/45wXB7D5NthO/3lgwnHzy1mFAz0Md3e1CxgV1lvKjVwY5MvI40l7Tlk4Bkx39p6Qt/0GAcEg==}

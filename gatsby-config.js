@@ -66,12 +66,9 @@ module.exports = {
         },
       },
     },
-    "gatsby-transformer-sharp",
-    {
-      resolve: `gatsby-plugin-cloudflare-web-analytics`,
-      options: {
-        token: "fa6adea96202483e94ab63d598660154",
-      },
-    },
+    "gatsby-transformer-sharp"
+  ],
+  partytownProxiedURLs: [
+    `https://static.cloudflareinsights.com/beacon.min.js?token=${process.env.GATSBY_WEB_ANALYTICS_TOKEN}`
   ],
 };

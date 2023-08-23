@@ -1,5 +1,4 @@
 import React from "react";
-// import "../style/style.css";
 import { Hero, Feature, Testimonial, Pricing, Faq, Close, SEO } from "../components";
 
 const IndexPage = () => {
