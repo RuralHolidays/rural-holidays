@@ -7,6 +7,7 @@ module.exports = {
     siteUrl: "https://ruralholidays.co.nz",
     description: `Home to Rural Holidays`,
     author: `CODOS`,
+    image: `/logo_rural_holidays.png`,
   },
   plugins: [
     "gatsby-plugin-pnpm",

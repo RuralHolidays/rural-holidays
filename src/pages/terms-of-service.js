@@ -1,8 +1,9 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import "../style/style.css";
+import { SEO } from "../components";
 
-const TermOfServicePage = () => {
+const TermsOfServicePage = () => {
   const data = useStaticQuery(graphql`
     {
       allFile(
@@ -41,4 +42,10 @@ const TermOfServicePage = () => {
     </>
   );
 };
-export default TermOfServicePage;
+
+export default TermsOfServicePage;
+
+
+export const Head = () => (
+  <SEO title="Terms of Service | Rural Holidays" />
+)

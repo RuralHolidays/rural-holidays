@@ -462,6 +462,8 @@ form {
 .ui-section-header {
   padding-bottom: 1.25rem;
   padding-top: 1.25rem;
+  background-color: rgb(195,25,35) !important;
+
 }
 
 .ui-section-header__layout {
@@ -611,7 +613,7 @@ form {
 .ui-section-feature {
   background-color: var(--ui-color-background-secondary);
   padding-bottom: 5rem;
-  /* padding-top: 5rem; */
+  padding-top: 5rem;
 }
 
 .ui-section-feature__layout {
@@ -947,6 +949,8 @@ form {
   .ui-section-header {
     padding-bottom: 0;
     padding-top: 2rem;
+    padding-top: 0;
+    background-color: rgb(195,25,35) !important;
   }
 
   /* ICON */
@@ -1234,7 +1238,9 @@ form {
   ------------------------------------------------------------*/
 
   .ui-section-header {
-    padding-top: 3rem;
+    /* padding-top: 3rem; */
+    padding-top: 0;
+    background-color: rgb(195,25,35) !important;
   }
 
   /*------------------------------------------------------------

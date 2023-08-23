@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function Pricing() {
+const Pricing = () => {
   return (
-    <section className="ui-section-pricing" id="our-survices">
+    <section className="ui-section-pricing" id="our-services">
       <div className="ui-layout-container">
         <h2>Our Services</h2>
          
@@ -10,3 +10,5 @@ export default function Pricing() {
     </section>
   );
 }
+
+export default Pricing;

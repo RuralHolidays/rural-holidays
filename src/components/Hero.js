@@ -1,5 +1,6 @@
 import React from "react";
-import Slider from "./Slider";
+import { Slider } from ".";
+
 export default function Hero() {
   return (
     <>

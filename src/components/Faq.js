@@ -15,7 +15,7 @@ export default function Faq() {
               travelers and small custom tour groups.
             </p>
           </div>
-          <div style={{ alignSelf: "start !important;" }}>
+          <div style={{ alignSelf: "start !important" }}>
             <h4 className="ui-component-list--item ui-section-faq--question">Technical Farm Visits</h4>
             <p className="ui-section-faq--answer">
               Available at selected host properties nationwide, ideal for tour groups, with morning or afternoon tea, or
@@ -42,9 +42,9 @@ export default function Faq() {
           <StaticImage src="../images/tm.png" width="400" />
           <br />
           Still have questions?{" "}
-          <a onClick={() => scrollTo("#contact")} aria-label="#contact" style={{cursor: "pointer !important"}}>
+          <span onClick={() => scrollTo("#contact")} aria-label="#contact" style={{cursor: "help !important", textDecoration: "underline"}}>
             Contact us
-          </a>
+          </span>
           .<br />
         </p>
       </div>

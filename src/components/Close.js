@@ -1,10 +1,10 @@
 import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
 
-export default function Close() {
+const Close = () => {
   const [state, handleSubmit] = useForm("xbjqdoje");
+
   return (
-    <>
       <section className="ui-section-close" id="contact">
         <div className="ui-layout-container">
           <div className="ui-section-close__layout ui-layout-flex">
@@ -72,6 +72,7 @@ export default function Close() {
           </div>
         </div>
       </section>
-    </>
   );
 }
+
+export default Close;

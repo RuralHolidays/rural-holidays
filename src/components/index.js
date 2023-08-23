@@ -1,0 +1,10 @@
+export { default as Close } from "./Close.js";
+export { default as Faq } from "./Faq.js";
+export { default as Feature } from "./Feature.js";
+export { default as Footer } from "./Footer.js";
+export { default as Header } from "./Header.js";
+export { default as Hero } from "./Hero.js";
+export { default as Pricing } from "./Pricing.js";
+export { default as SEO } from "./seo.js";
+export { default as Slider } from "./Slider.js";
+export { default as Testimonial } from "./Testimonial.js";

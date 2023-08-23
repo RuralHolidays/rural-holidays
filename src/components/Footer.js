@@ -4,7 +4,6 @@ import { StaticImage } from "gatsby-plugin-image";
 import "../style/style.css";
 import * as FooterStyles from "./Footer.module.css"
 
-
 export default function Footer() {
   const data = useStaticQuery(graphql`
     {
@@ -23,13 +22,12 @@ export default function Footer() {
       }
     }
   `);
-  
+
   return (
     <footer role="contentinfo" className="ui-section-footer">
       <div className="ui-layout-container">
         <div
           className={`ui-section-footer__layout ui-layout-flex ${FooterStyles.columnwrap}`}
-          // style={spaceBetweenColumnWrapStyle}
         >
           <p
             className="ui-section-footer--copyright ui-text-note"
@@ -45,7 +43,7 @@ export default function Footer() {
                 className="ui-section-footer--copyright ui-text-note"
               >
                 <small>
-                  <a href={file.node.publicURL} download style={{fontWeight: "bold"}}>
+                  <a href={file.node.publicURL} download>
                     {file.node.name}
                   </a>
                 </small>
@@ -58,7 +56,6 @@ export default function Footer() {
       <div className="ui-layout-container">
         <div
           className={`ui-section-footer__layout ui-layout-flex ${FooterStyles.rowwrap}`}
-          // style={spaceBetweenRowWrapStyle}
         >
           {/* <!-- COPYRIGHT --> */}
           <p className="ui-section-footer--copyright ui-text-note">
@@ -71,7 +68,7 @@ export default function Footer() {
           <p className="ui-section-footer--copyright ui-text-note">
             <small>
               Proudly hosted by{" "}
-              <a href="https://www.codos.co.nz/" aria-label="#">
+              <a href="https://www.codos.co.nz/" aria-label="Link to Website Builder CODOS">
                 <StaticImage src="../images/logo_codos.png" width={70} />
               </a>
             </small>

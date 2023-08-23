@@ -1,65 +1,39 @@
 import React from "react";
-import { Helmet } from "react-helmet";
-import { useStaticQuery, graphql } from "gatsby";
+import { useSiteMetadata } from "../hooks/use-site-metadata"
 
-function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-          }
-        }
-      }
-    `
-  );
+const SEO = ({ title, description, pathname, children }) => {
+  const { 
+    title: defaultTitle, 
+    description: defaultDescription, 
+    image, 
+    siteUrl, 
+    author
+  } = useSiteMetadata()
 
-  const metaDescription = description || site.siteMetadata.description;
+  const seo = {
+    title: title || defaultTitle,
+    description: description || defaultDescription,
+    image: `${siteUrl}${image}`,
+    url: `${siteUrl}${pathname || ``}`,
+    author
+  }
 
   return (
-    <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={title}
-      titleTemplate={`%s | ${metaDescription}`}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author ?? "CODOS",
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-      ].concat(meta)}
-    />
+    <>
+      <title>{seo.title}</title>
+      <meta name="description" content={seo.description} />
+      <meta name="og:title" content={seo.title} />
+      <meta name="og:description" content={seo.description} />
+      <meta name="og:type" content={"website"} />
+      <meta name="image" content={seo.image} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={seo.title} />
+      <meta name="twitter:url" content={seo.url} />
+      <meta name="twitter:description" content={seo.description} />
+      <meta name="twitter:image" content={seo.image} />
+      <meta name="twitter:creator" content={seo.author} />
+      {children}
+    </>
   );
 }
 

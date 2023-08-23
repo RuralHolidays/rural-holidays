@@ -1,7 +1,7 @@
 import React, { useState } from "react";
+import { Link } from "gatsby";
 import logo_rural_holidays from "../images/logo_rural_holidays.png";
 import "../style/style.css";
-import { Link } from "gatsby";
 import * as HeaderStyles from "./Header.module.css"
 
 export default function Header() {
@@ -24,13 +24,10 @@ export default function Header() {
   return (
     <>
       <header role="banner" className={`ui-section-header ${HeaderStyles.header}`}>
-        <div>
-          {/* className="ui-layout-container" */}
           <div
             className={`ui-section-header__layout ui-layout-flex ${HeaderStyles.flex}`}
           >
             {/* <!-- LOGO --> */}
-
             <Link
               to="/"
               className={`ui-section-header--logo`}
@@ -46,14 +43,15 @@ export default function Header() {
               onClick={onClickMobile}
             />
             <label
-              for="ui-section-header--menu-id"
+              htmlFor="ui-section-header--menu-id"
               className="ui-section-header--menu-icon"
             ></label>
+
             {/* <!-- MENU --> */}
             <nav
               role="navigation"
               className={`ui-section-header--nav ui-layout-flex ${HeaderStyles.nav}`}
-              // style={navStyle}
+              style={navStyle}
             >
               <Link
                 to="/#about-us"
@@ -61,23 +59,22 @@ export default function Header() {
               >
                 About Us
               </Link>
-              <div style={visibilityStyle} class="nav-divider"></div>
+              <div style={visibilityStyle} className="nav-divider"></div>
               <Link
-                to="/#our-survices"
+                to="/#our-services"
                 className="ui-section-header--nav-link"
               >
                 Our Services
               </Link>
-              <div style={visibilityStyle} class="nav-divider"></div>
+              <div style={visibilityStyle} className="nav-divider"></div>
               <Link
                 to="/#contact"
                 className="ui-section-header--nav-link"
               >
-                contact
+                Contact
               </Link>
             </nav>
           </div>
-        </div>
       </header>
     </>
   );
