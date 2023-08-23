@@ -349,12 +349,8 @@ input[name="toggle"] {
   padding: 0.5rem 0.625rem;
 }
 
-#ui-component-toggle__monthly:checked
-  ~ div
-  label[for="ui-component-toggle__monthly"],
-#ui-component-toggle__yearly:checked
-  ~ div
-  label[for="ui-component-toggle__yearly"] {
+#ui-component-toggle__monthly:checked ~ div label[for="ui-component-toggle__monthly"],
+#ui-component-toggle__yearly:checked ~ div label[for="ui-component-toggle__yearly"] {
   background-color: var(--ui-color-background-primary);
   color: var(--ui-color-typography-body);
 }
@@ -462,8 +458,7 @@ form {
 .ui-section-header {
   padding-bottom: 1.25rem;
   padding-top: 1.25rem;
-  background-color: rgb(195,25,35) !important;
-
+  background-color: rgb(195, 25, 35) !important;
 }
 
 .ui-section-header__layout {
@@ -490,7 +485,7 @@ form {
   padding-top: 0.25rem;
   position: relative;
   width: 1.125rem;
-  z-index: 1;
+  z-index: 1000;
 }
 
 .ui-section-header--menu-icon::before,
@@ -566,9 +561,8 @@ form {
 
 .ui-section-hero {
   padding-bottom: 5rem;
-  padding-top: 5rem;
+  /* padding-top: 5rem; */
   text-align: center;
-  height: calc(100vh - 120px - 3rem);
 }
 
 .ui-section-hero__layout {
@@ -613,7 +607,7 @@ form {
 .ui-section-feature {
   background-color: var(--ui-color-background-secondary);
   padding-bottom: 5rem;
-  padding-top: 5rem;
+  /* padding-top: 5rem; */
 }
 
 .ui-section-feature__layout {
@@ -714,9 +708,7 @@ form {
   content: "$5";
 }
 
-#ui-component-toggle__yearly:checked
-  ~ div
-  .ui-component-card--pricing-amount-1::before {
+#ui-component-toggle__yearly:checked ~ div .ui-component-card--pricing-amount-1::before {
   content: "$3";
 }
 
@@ -724,9 +716,7 @@ form {
   content: "$15";
 }
 
-#ui-component-toggle__yearly:checked
-  ~ div
-  .ui-component-card--pricing-amount-2::before {
+#ui-component-toggle__yearly:checked ~ div .ui-component-card--pricing-amount-2::before {
   content: "$13";
 }
 
@@ -734,9 +724,7 @@ form {
   content: "$25";
 }
 
-#ui-component-toggle__yearly:checked
-  ~ div
-  .ui-component-card--pricing-amount-3::before {
+#ui-component-toggle__yearly:checked ~ div .ui-component-card--pricing-amount-3::before {
   content: "$23";
 }
 
@@ -950,7 +938,7 @@ form {
     padding-bottom: 0;
     padding-top: 2rem;
     padding-top: 0;
-    background-color: rgb(195,25,35) !important;
+    background-color: rgb(195, 25, 35) !important;
   }
 
   /* ICON */
@@ -985,6 +973,7 @@ form {
 
   .ui-section-hero {
     text-align: left;
+    height: calc(100vh - 120px - 3rem);
   }
 
   .ui-section-hero .ui-component-cta {
@@ -993,7 +982,11 @@ form {
 
   .ui-section-hero.bg-image {
     /* The image used */
-    background-image: url("../images/hero_background.avif"), url("../images/hero_background.webp"), url("../images/hero_background.jpg"), url("../images/hero_background.png");
+    background-image: image-set(
+      url("../images/hero_background.avif") type("image/avif"),
+      url("../images/hero_background.webp") type("image/webp"),
+      url("../images/hero_background.jpg") type("image/jpeg")
+    );
 
     /* Full height */
     /* height: 100%; */
@@ -1240,7 +1233,7 @@ form {
   .ui-section-header {
     /* padding-top: 3rem; */
     padding-top: 0;
-    background-color: rgb(195,25,35) !important;
+    background-color: rgb(195, 25, 35) !important;
   }
 
   /*------------------------------------------------------------
@@ -1250,8 +1243,9 @@ form {
   ------------------------------------------------------------*/
 
   .ui-section-hero {
-    padding-bottom: 7.5rem;
-    padding-top: 7.5rem;
+    padding-bottom: 5rem;
+    /* padding-top: 5rem; */
+    height: calc(100vh - 120px - 3rem);
   }
 
   /*------------------------------------------------------------

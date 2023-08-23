@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Testimonial() {
+const Testimonial = () => {
   return (
     <section className="ui-section-testimonial">
       <div className="ui-layout-container">
@@ -13,4 +13,6 @@ export default function Testimonial() {
       </div>
     </section>
   );
-}
+};
+
+export default Testimonial;

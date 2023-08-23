@@ -14,7 +14,8 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "pages:dev": "wrangler pages dev --compatibility-date=2023-08-23 --proxy 8000 -- pnpm run develop",
-    "pages:deploy": "pnpm run build && wrangler pages deploy ./public"
+    "pages:deploy": "pnpm run build && wrangler pages deploy ./public",
+    "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,mdx,css,scss,yml,yaml}\""
   },
   "dependencies": {
     "@formspree/react": "^2.5.0",
@@ -36,6 +37,7 @@
     "eslint-plugin-flowtype": "^8.0.3",
     "gatsby-plugin-layout": "^4.11.0",
     "gatsby-plugin-pnpm": "^1.2.10",
+    "prettier": "^3.0.2",
     "wrangler": "^3.5.1"
   }
 }

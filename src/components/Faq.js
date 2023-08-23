@@ -2,8 +2,7 @@ import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import scrollTo from "gatsby-plugin-smoothscroll";
 
-export default function Faq() {
-
+const Faq = () => {
   return (
     <section className="ui-section-faq">
       <div className="ui-layout-container">
@@ -39,10 +38,19 @@ export default function Faq() {
         </div>
 
         <p className="ui-section-faq--note">
-          <StaticImage src="../images/tm.png" width="400" />
+          <StaticImage
+            src="../images/tm.avif"
+            width="400"
+            formats={["auto", "avif", "webp"]}
+            alt="logo of Tourism Industry Member"
+          />
           <br />
           Still have questions?{" "}
-          <span onClick={() => scrollTo("#contact")} aria-label="#contact" style={{cursor: "help !important", textDecoration: "underline"}}>
+          <span
+            onClick={() => scrollTo("#contact")}
+            aria-label="#contact"
+            style={{ cursor: "help !important", textDecoration: "underline" }}
+          >
             Contact us
           </span>
           .<br />
@@ -50,4 +58,6 @@ export default function Faq() {
       </div>
     </section>
   );
-}
+};
+
+export default Faq;

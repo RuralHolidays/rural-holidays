@@ -1,22 +1,16 @@
 import React from "react";
-import { useSiteMetadata } from "../hooks/use-site-metadata"
+import { useSiteMetadata } from "../hooks/use-site-metadata";
 
 const SEO = ({ title, description, pathname, children }) => {
-  const { 
-    title: defaultTitle, 
-    description: defaultDescription, 
-    image, 
-    siteUrl, 
-    author
-  } = useSiteMetadata()
+  const { title: defaultTitle, description: defaultDescription, image, siteUrl, author } = useSiteMetadata();
 
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
     image: `${siteUrl}${image}`,
     url: `${siteUrl}${pathname || ``}`,
-    author
-  }
+    author,
+  };
 
   return (
     <>
@@ -35,6 +29,6 @@ const SEO = ({ title, description, pathname, children }) => {
       {children}
     </>
   );
-}
+};
 
 export default SEO;

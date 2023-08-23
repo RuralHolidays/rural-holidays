@@ -1,18 +1,12 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
-import "../style/style.css";
-import * as FooterStyles from "./Footer.module.css"
+import * as FooterStyles from "./Footer.module.css";
 
-export default function Footer() {
+const Footer = () => {
   const data = useStaticQuery(graphql`
     {
-      allFile(
-        filter: {
-          sourceInstanceName: { eq: "files" }
-          extension: { eq: "pdf" }
-        }
-      ) {
+      allFile(filter: { sourceInstanceName: { eq: "files" }, extension: { eq: "pdf" } }) {
         edges {
           node {
             publicURL
@@ -26,9 +20,7 @@ export default function Footer() {
   return (
     <footer role="contentinfo" className="ui-section-footer">
       <div className="ui-layout-container">
-        <div
-          className={`ui-section-footer__layout ui-layout-flex ${FooterStyles.columnwrap}`}
-        >
+        <div className={`ui-section-footer__layout ui-layout-flex ${FooterStyles.columnwrap}`}>
           <p
             className="ui-section-footer--copyright ui-text-note"
             style={{ marginBottom: ".8rem", fontWeight: "bold" }}
@@ -38,10 +30,7 @@ export default function Footer() {
 
           {data.allFile.edges.map((file, index) => {
             return (
-              <p
-                key={`pdf-${index}`}
-                className="ui-section-footer--copyright ui-text-note"
-              >
+              <p key={`pdf-${index}`} className="ui-section-footer--copyright ui-text-note">
                 <small>
                   <a href={file.node.publicURL} download>
                     {file.node.name}
@@ -54,14 +43,10 @@ export default function Footer() {
       </div>
       <br />
       <div className="ui-layout-container">
-        <div
-          className={`ui-section-footer__layout ui-layout-flex ${FooterStyles.rowwrap}`}
-        >
+        <div className={`ui-section-footer__layout ui-layout-flex ${FooterStyles.rowwrap}`}>
           {/* <!-- COPYRIGHT --> */}
           <p className="ui-section-footer--copyright ui-text-note">
-            <small>
-              All rights reserved &copy; Rural Holidays NZ Ltd {new Date().getFullYear()}
-            </small>
+            <small>All rights reserved &copy; Rural Holidays NZ Ltd {new Date().getFullYear()}</small>
           </p>
 
           {/* <!-- MENU --> */}
@@ -69,7 +54,12 @@ export default function Footer() {
             <small>
               Proudly hosted by{" "}
               <a href="https://www.codos.co.nz/" aria-label="Link to Website Builder CODOS">
-                <StaticImage src="../images/logo_codos.png" width={70} />
+                <StaticImage
+                  src="../images/logo_codos.avif"
+                  width={70}
+                  formats={["auto", "avif", "webp"]}
+                  alt="logo of CODOS"
+                />
               </a>
             </small>
           </p>
@@ -77,4 +67,6 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;

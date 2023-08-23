@@ -7,15 +7,15 @@ module.exports = {
     siteUrl: "https://ruralholidays.co.nz",
     description: `Home to Rural Holidays`,
     author: `CODOS`,
-    image: `/logo_rural_holidays.png`,
+    image: `/logo_rural_holidays.webp`,
   },
   plugins: [
     "gatsby-plugin-pnpm",
     {
       resolve: `gatsby-plugin-layout`,
-      options:{
+      options: {
         component: require.resolve(`./src/components/layout.js`),
-      }
+      },
     },
     {
       resolve: "gatsby-plugin-web-font-loader",
@@ -49,7 +49,23 @@ module.exports = {
     },
     "gatsby-plugin-smoothscroll",
     "gatsby-plugin-image",
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp"
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`auto`, `avif`, `webp`],
+          placeholder: `dominantColor`,
+          quality: 80,
+          breakpoints: [750, 1080, 1366, 1920],
+          backgroundColor: `transparent`,
+          blurredOptions: {},
+          jpgOptions: {},
+          pngOptions: {},
+          webpOptions: {},
+          avifOptions: {},
+        },
+      },
+    },
+    "gatsby-transformer-sharp",
   ],
-}
+};

@@ -3,8 +3,8 @@
   flex-flow: row wrap !important;
 }
 
-.columnwrap{
+.columnwrap {
   justify-content: space-between !important;
   flex-flow: column wrap !important;
   align-items: start !important;
-};
+}

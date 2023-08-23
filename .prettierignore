@@ -1,0 +1,5 @@
+build/**
+public/**
+dist/**
+.cache/**
+pnpm-lock.yaml

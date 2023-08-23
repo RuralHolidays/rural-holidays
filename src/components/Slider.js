@@ -25,48 +25,67 @@ const Slider = () => {
           interval={5000}
         >
           <StaticImage
-            src="../images/slider_images/1.jpg"
+            src="../images/slider_images/1.avif"
             loading="lazy"
             alt="slider image 1 of a farm"
             className="ui-image-half-right"
+            formats={["auto", "avif", "webp"]}
+            aspectRatio={6 / 4}
+            placeholder="blurred"
           />
-
           <StaticImage
-            src="../images/slider_images/2.png"
+            src="../images/slider_images/2.avif"
             loading="lazy"
             alt="slider image 2 of a farm"
             className="ui-image-half-right"
+            formats={["auto", "avif", "webp"]}
+            aspectRatio={6 / 4}
+            placeholder="blurred"
           />
-
           <StaticImage
-            src="../images/slider_images/3.jpg"
+            src="../images/slider_images/3.avif"
             loading="lazy"
             alt="slider image 3 of a farm"
             className="ui-image-half-right"
+            formats={["auto", "avif", "webp"]}
+            aspectRatio={6 / 4}
+            placeholder="blurred"
           />
           <StaticImage
-            src="../images/slider_images/4.jpg"
+            src="../images/slider_images/4.avif"
             loading="lazy"
             alt="slider image 4 of a farm"
             className="ui-image-half-right"
+            formats={["auto", "avif", "webp"]}
+            aspectRatio={6 / 4}
+            placeholder="blurred"
           />
           <StaticImage
-            src="../images/slider_images/5.jpg"
+            src="../images/slider_images/5.avif"
             loading="lazy"
             alt="slider image 5 of a farm"
             className="ui-image-half-right"
+            formats={["auto", "avif", "webp"]}
+            aspectRatio={6 / 4}
+            placeholder="blurred"
           />
           <StaticImage
-            src="../images/slider_images/6.jpg"
+            src="../images/slider_images/6.avif"
             loading="lazy"
             alt="slider image 6 of a farm"
             className="ui-image-half-right"
+            formats={["auto", "avif", "webp"]}
+            aspectRatio={6 / 4}
+            placeholder="blurred"
           />
           <StaticImage
-            src="../images/slider_images/7.png"
+            src="../images/slider_images/7.avif"
             loading="lazy"
             alt="slider image 7 of a farm"
             className="ui-image-half-right"
+            formats={["auto", "avif", "webp"]}
+            aspectRatio={6 / 4}
+            placeholder="blurred"
           />
         </Carousel>
       </div>

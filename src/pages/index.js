@@ -17,6 +17,4 @@ const IndexPage = () => {
 
 export default IndexPage;
 
-export const Head = () => (
-  <SEO />
-)
+export const Head = () => <SEO />;
