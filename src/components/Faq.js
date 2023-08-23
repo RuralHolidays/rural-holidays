@@ -44,7 +44,7 @@ const Faq = () => {
             formats={["auto", "avif", "webp"]}
             alt="logo of Tourism Industry Member"
           />
-          {/* <br /> */}
+          <br />
           Still have questions?{" "}
           <span
             onClick={() => scrollTo("#contact")}
