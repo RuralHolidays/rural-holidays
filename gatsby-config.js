@@ -18,14 +18,6 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-web-font-loader",
-      options: {
-        google: {
-          families: ["Roboto Slab"],
-        },
-      },
-    },
-    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
@@ -66,9 +58,31 @@ module.exports = {
         },
       },
     },
-    "gatsby-transformer-sharp"
+    "gatsby-transformer-sharp",
+    {
+      /* Include plugin */
+      resolve: "gatsby-omni-font-loader",
+      /* Plugin options */
+      options: {
+        /* Font loading mode */
+        mode: "async",
+        /* Enable font loading listener to handle FONT */
+        enableListener: true,
+        /* Preconnect URL-s. This example is for Google Fonts */
+        preconnect: [`https://fonts.googleapis.com`, `https://fonts.gstatic.com`],
+        /* Web fonts. File link should point to font CSS file. */
+        web: [
+          {
+            /* Exact name of the font as defied in @font-face CSS rule */
+            name: "Roboto Slab",
+            /* URL to the font CSS file with @font-face definition */
+            file: "https://fonts.googleapis.com/css2?family=Roboto+Slab",
+          },
+        ],
+      },
+    },
   ],
   partytownProxiedURLs: [
-    `https://static.cloudflareinsights.com/beacon.min.js?token=${process.env.GATSBY_WEB_ANALYTICS_TOKEN}`
+    `https://static.cloudflareinsights.com/beacon.min.js?token=${process.env.GATSBY_WEB_ANALYTICS_TOKEN}`,
   ],
 };
