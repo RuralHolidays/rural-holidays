@@ -19,7 +19,6 @@ export default IndexPage;
 
 export const Head = () => (
   <>
-    
     <SEO>
       <Script
         id="cloudflare-web-analytics"
