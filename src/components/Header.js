@@ -33,7 +33,8 @@ const Header = () => {
           </Link>
 
           {/* <!-- HAMBURGER --> */}
-          <input type="checkbox" id="ui-section-header--menu-id" onClick={onClickMobile} checked={!display} />
+          <input type="checkbox" id="ui-section-header--menu-id" 
+          checked={!display} onChange={onClickMobile} />
           <label htmlFor="ui-section-header--menu-id" className="ui-section-header--menu-icon"></label>
 
           {/* <!-- MENU --> */}

@@ -1,5 +1,5 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql, Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import * as FooterStyles from "./Footer.module.css";
 
@@ -21,24 +21,28 @@ const Footer = () => {
     <footer role="contentinfo" className="ui-section-footer">
       <div className="ui-layout-container">
         <div className={`ui-section-footer__layout ui-layout-flex ${FooterStyles.columnwrap}`}>
-          <p
+          <Link
+            to="/terms-of-service"
             className="ui-section-footer--copyright ui-text-note"
             style={{ marginBottom: ".8rem", fontWeight: "bold" }}
           >
             Terms of Service
-          </p>
-
-          {data.allFile.edges.map((file, index) => {
-            return (
-              <p key={`pdf-${index}`} className="ui-section-footer--copyright ui-text-note">
-                <small>
+          </Link>
+          <ul>
+            {data.allFile.edges.map((file, index) => {
+              return (
+                <li
+                  key={`pdf-${file.node.nam}-${index}`}
+                  className="ui-section-footer--copyright ui-text-note"
+                  style={{ marginLeft: "1.2rem" }}
+                >
                   <a href={file.node.publicURL} download>
-                    {file.node.name}
+                    <small>{file.node.name}</small>
                   </a>
-                </small>
-              </p>
-            );
-          })}
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </div>
       <br />
@@ -50,7 +54,7 @@ const Footer = () => {
           </p>
 
           {/* <!-- MENU --> */}
-          <p className="ui-section-footer--copyright ui-text-note">
+          <div className="ui-section-footer--copyright ui-text-note">
             <small>
               Proudly hosted by{" "}
               <a href="https://www.codos.co.nz/" aria-label="Link to Website Builder CODOS">
@@ -62,7 +66,7 @@ const Footer = () => {
                 />
               </a>
             </small>
-          </p>
+          </div>
         </div>
       </div>
     </footer>

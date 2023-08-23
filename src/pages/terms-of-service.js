@@ -40,4 +40,8 @@ const TermsOfServicePage = () => {
 
 export default TermsOfServicePage;
 
-export const Head = () => <SEO title="Terms of Service | Rural Holidays" />;
+export const Head = () => (
+  <>
+    <SEO title="Terms of Service | Rural Holidays" />
+  </>
+);

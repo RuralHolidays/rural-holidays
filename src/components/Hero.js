@@ -9,10 +9,10 @@ const Hero = () => {
         <StaticImage
           style={{
             gridArea: "1/1",
-            // height: "calc(100vh - 120px - 3rem)",
             maxHeight: "100vh",
           }}
           layout="fullWidth"
+          loading="eager"
           alt="New Zealand Farm as background image"
           src={"../images/hero_background.avif"}
           formats={["auto", "avif", "webp"]}

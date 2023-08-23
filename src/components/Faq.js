@@ -37,14 +37,14 @@ const Faq = () => {
           </div>
         </div>
 
-        <p className="ui-section-faq--note">
+        <div className="ui-section-faq--note">
           <StaticImage
             src="../images/tm.avif"
-            width="400"
+            width={400}
             formats={["auto", "avif", "webp"]}
             alt="logo of Tourism Industry Member"
           />
-          <br />
+          {/* <br /> */}
           Still have questions?{" "}
           <span
             onClick={() => scrollTo("#contact")}
@@ -54,7 +54,7 @@ const Faq = () => {
             Contact us
           </span>
           .<br />
-        </p>
+        </div>
       </div>
     </section>
   );

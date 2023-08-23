@@ -10,7 +10,7 @@
 .nav {
   background-color: rgb(66, 182, 37) !important;
   width: 100%;
-  /* height: 6rem !important; */
+  min-height: 3rem !important;
   cursor: pointer !important;
   z-index: 300;
 }
