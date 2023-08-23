@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-minimal",
-  "version": "1.0.0",
+  "name": "rural-holidays",
+  "version": "2.0.0",
   "private": true,
-  "description": "A Gatsby starter with no plugins and a single welcome page.",
-  "author": "Laurie Barth",
+  "description": "Website for RuralHolidays",
+  "author": "CODOS",
   "keywords": [
     "gatsby"
   ],
@@ -16,13 +16,25 @@
     "pages:dev": "wrangler pages dev --compatibility-date=2023-08-23 --proxy 8000 -- pnpm run develop",
     "pages:deploy": "pnpm run build && wrangler pages deploy ./public"
   },
-  "license": "0BSD",
   "dependencies": {
+    "@formspree/react": "^2.5.0",
     "gatsby": "^5.11.0",
+    "gatsby-plugin-image": "^3.11.0",
+    "gatsby-plugin-manifest": "^5.11.0",
+    "gatsby-plugin-sharp": "^5.11.0",
+    "gatsby-plugin-smoothscroll": "^1.2.0",
+    "gatsby-plugin-web-font-loader": "^1.0.4",
+    "gatsby-source-filesystem": "^5.11.0",
+    "gatsby-transformer-sharp": "^5.11.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-responsive-carousel": "^3.2.23"
   },
   "devDependencies": {
+    "eslint": "^8.47.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-flowtype": "^8.0.3",
+    "gatsby-plugin-layout": "^4.11.0",
     "gatsby-plugin-pnpm": "^1.2.10",
     "wrangler": "^3.5.1"
   }
