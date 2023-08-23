@@ -77,6 +77,7 @@ const SEO = ({ title, description, pathname, children }) => {
   return (
     <>
       <html lang="en-NZ" />
+      <body className="wf-georgia wf-roboto-slab wf-all" />
       <title>{seo.title}</title>
       <meta name="description" content={seo.description} />
       <meta name="og:title" content={seo.title} />

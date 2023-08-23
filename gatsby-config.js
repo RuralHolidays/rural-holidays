@@ -66,7 +66,7 @@ module.exports = {
       options: {
         /* Font loading mode */
         mode: "async",
-        /* Enable font loading listener to handle FONT */
+        /* Enable font loading listener to handle FOUT */
         enableListener: true,
         /* Preconnect URL-s. This example is for Google Fonts */
         preconnect: [`https://fonts.googleapis.com`, `https://fonts.gstatic.com`],
@@ -76,7 +76,7 @@ module.exports = {
             /* Exact name of the font as defied in @font-face CSS rule */
             name: "Roboto Slab",
             /* URL to the font CSS file with @font-face definition */
-            file: "https://fonts.googleapis.com/css2?family=Roboto+Slab",
+            file: "https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap",
           },
         ],
       },
