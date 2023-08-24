@@ -60,9 +60,11 @@ const Footer = () => {
               <a href="https://www.codos.co.nz/" aria-label="Link to Website Builder CODOS">
                 <StaticImage
                   src="../images/logo_codos.avif"
-                  width={70}
+                  width={78}
+                  quality={100}
                   formats={["auto", "avif", "webp"]}
                   alt="logo of CODOS"
+                  layout="fullWidth"
                 />
               </a>
             </small>

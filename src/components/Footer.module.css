@@ -1,6 +1,6 @@
 .rowwrap {
   justify-content: space-between !important;
-  flex-flow: row wrap !important;
+  /* flex-flow: row wrap !important; */
 }
 
 .columnwrap {
