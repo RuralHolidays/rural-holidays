@@ -83,6 +83,6 @@ module.exports = {
     },
   ],
   partytownProxiedURLs: [
-    `https://static.cloudflareinsights.com/beacon.min.js?token=${process.env.GATSBY_WEB_ANALYTICS_TOKEN}`,
+    `https://ruralholidays.co.nz/mur/scitylanabew/nocaeb.js?token=${process.env.GATSBY_WEB_ANALYTICS_TOKEN}`,
   ],
 };

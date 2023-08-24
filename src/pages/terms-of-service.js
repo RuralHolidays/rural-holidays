@@ -1,5 +1,5 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql, Script, ScriptStrategy } from "gatsby";
 import "../style/style.css";
 import { SEO } from "../components";
 
@@ -42,6 +42,12 @@ export default TermsOfServicePage;
 
 export const Head = () => (
   <>
-    <SEO title="Terms of Service | Rural Holidays" />
+    <SEO title="Terms of Service | Rural Holidays">
+      <Script
+        id="cloudflare-web-analytics-tos"
+        src={`https://ruralholidays.co.nz/mur/scitylanabew/nocaeb.js?token=${process.env.GATSBY_WEB_ANALYTICS_TOKEN}`}
+        strategy={ScriptStrategy.offMainThread}
+      />
+    </SEO>
   </>
 );

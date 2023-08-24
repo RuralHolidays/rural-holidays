@@ -22,7 +22,7 @@ export const Head = () => (
     <SEO>
       <Script
         id="cloudflare-web-analytics"
-        src={`https://static.cloudflareinsights.com/beacon.min.js?token=${process.env.GATSBY_WEB_ANALYTICS_TOKEN}&spa=false`}
+        src={`https://ruralholidays.co.nz/mur/scitylanabew/nocaeb.js?token=${process.env.GATSBY_WEB_ANALYTICS_TOKEN}`}
         strategy={ScriptStrategy.offMainThread}
       />
     </SEO>
