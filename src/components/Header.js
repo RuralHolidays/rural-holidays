@@ -24,11 +24,14 @@ const Header = () => {
           <Link to="/" className={`ui-section-header--logo`} style={visibilityStyle}>
             <StaticImage
               src="../images/logo_rural_holidays.avif"
-              formats={["auto", "avif", "webp"]}
+              formats={["avif", "webp", "png"]}
               alt="Rural Holidays Logo"
               height={200}
               layout="fixed"
               placeholder="blurred"
+              loading="eager"
+              decoding="sync"
+              fetchpriority="high"
             />
           </Link>
 

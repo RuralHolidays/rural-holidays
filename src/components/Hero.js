@@ -13,9 +13,11 @@ const Hero = () => {
           }}
           layout="fullWidth"
           loading="eager"
+          decoding="sync"
           alt="New Zealand Farm as background image"
           src={"../images/hero_background.avif"}
-          formats={["auto", "avif", "webp"]}
+          formats={["avif", "webp", "png"]}
+          fetchpriority="high"
         />
         <section
           className="ui-section-hero"
