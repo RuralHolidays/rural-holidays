@@ -26,7 +26,8 @@ const Slider = () => {
         >
           <StaticImage
             src="../images/slider_images/1.avif"
-            loading="lazy"
+            decoding="sync"
+            loading="eager"
             alt="slider image 1 of a farm"
             className="ui-image-half-right"
             formats={["auto", "avif", "webp"]}
@@ -35,7 +36,8 @@ const Slider = () => {
           />
           <StaticImage
             src="../images/slider_images/2.avif"
-            loading="lazy"
+            decoding="sync"
+            loading="eager"
             alt="slider image 2 of a farm"
             className="ui-image-half-right"
             formats={["auto", "avif", "webp"]}
@@ -44,7 +46,8 @@ const Slider = () => {
           />
           <StaticImage
             src="../images/slider_images/3.avif"
-            loading="lazy"
+            decoding="sync"
+            loading="eager"
             alt="slider image 3 of a farm"
             className="ui-image-half-right"
             formats={["auto", "avif", "webp"]}
@@ -53,7 +56,8 @@ const Slider = () => {
           />
           <StaticImage
             src="../images/slider_images/4.avif"
-            loading="lazy"
+            decoding="sync"
+            loading="eager"
             alt="slider image 4 of a farm"
             className="ui-image-half-right"
             formats={["auto", "avif", "webp"]}
@@ -62,7 +66,8 @@ const Slider = () => {
           />
           <StaticImage
             src="../images/slider_images/5.avif"
-            loading="lazy"
+            decoding="sync"
+            loading="eager"
             alt="slider image 5 of a farm"
             className="ui-image-half-right"
             formats={["auto", "avif", "webp"]}
@@ -71,7 +76,8 @@ const Slider = () => {
           />
           <StaticImage
             src="../images/slider_images/6.avif"
-            loading="lazy"
+            decoding="sync"
+            loading="eager"
             alt="slider image 6 of a farm"
             className="ui-image-half-right"
             formats={["auto", "avif", "webp"]}
@@ -80,7 +86,8 @@ const Slider = () => {
           />
           <StaticImage
             src="../images/slider_images/7.avif"
-            loading="lazy"
+            decoding="sync"
+            loading="eager"
             alt="slider image 7 of a farm"
             className="ui-image-half-right"
             formats={["auto", "avif", "webp"]}
